@@ -52,7 +52,7 @@ class BrickInfo:
                 'value': touch_sensor.value()
             }
         except:
-            # There is no color sensor
+            # There is no touch sensor
             touch_data = {'connected': 'false'}
 
         # rail motor
@@ -60,24 +60,24 @@ class BrickInfo:
             rail_motor = LargeMotor('outA')
             rail_data = self.get_motor_info(rail_motor)
         except:
-            # There is no color sensor
-            rail_data = {'connected': 'false'}
+            # There is no proper rail motor
+            rail_data = {'Rail Large Motor to Port A connected': 'false'}
 
         # paper motor
         try:
             paper_motor = LargeMotor('outB')
             paper_data = self.get_motor_info(paper_motor)
         except:
-            # There is no color sensor
-            paper_data = {'connected': 'false'}
+            # There is no proper paper motor
+            paper_data = {'Paper Feed Large Motor to Port B connected': 'false'}
 
         # pen motor
         try:
-            pen_motor = LargeMotor('outC')
+            pen_motor = MediumMotor('outC')
             pen_data = self.get_motor_info(pen_motor)
         except:
-            # There is no color sensor
-            pen_data = {'connected': 'false'}
+            # There is no proper pen motor
+            pen_data = {'Pen Medium Motor to Port C connected': 'false'}
 
         self.status = {
             'rail_motor': rail_data,
