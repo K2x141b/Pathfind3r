@@ -147,3 +147,24 @@ button:active{
 .padding10{
 	padding: 10px;
 }
+
+.tapping{
+	display: block;
+	float: left;
+	overflow: auto;
+	background-color:#f6372f;
+	width: 480px;
+	height: 900px;
+	padding: 10px; 
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.tapping_entry{
+	
+	color:#ffffff;
+	font: 12px "Impact, Charcoal, Arial, sans-serif", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+

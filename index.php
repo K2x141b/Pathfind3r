@@ -126,10 +126,18 @@ SOFTWARE.
 				<button id="draw_svg" style="margin-top:10px;">
 				<img src="images/btn_draw_svg.png"/>
 				</button>
+				<button id="start_taping" style="margin-top:10px;">
+				<p>text</p>
+				</button>
+				<button id="end_taping" style="margin-top:10px;">
+				<p>text</p>
+				</button>
 			</div>
 		</div>
 		<div class="console_container" id="console_container">
 		</div>
+        <div class="tapping" id="tapping">
+		</div>	
 	</body>
 </html>
 <script>
@@ -177,10 +185,13 @@ $( "body" ).keydown(function(e) {
 	  	$.post( "python_socket_server.php", { action: "send", data:"move_right" })
 	  }else if(e.keyCode == 37){ // LEFT
 		$.post( "python_socket_server.php", { action: "send", data:"move_left" })
-	  }else if(e.keyCode == 32){ // SPACE
+	  }else if(e.keyCode == 32){ // SPACE 32
+		logTapping("test")
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_pos" })
 	  }else if(e.keyCode == 90){ // z
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_state" })
+	  }else if(e.keyCode == 84){ // t
+		$.post( "python_socket_server.php", { action: "send", data:"start_time" })
 	  }
 });
 
@@ -193,13 +204,22 @@ $( "body" ).keyup(function(e) {
 	  	$.post( "python_socket_server.php", { action: "send", data:"move_stop" })
 	  }else if(e.keyCode == 37){ // LEFT
 	  	$.post( "python_socket_server.php", { action: "send", data:"move_stop" })
+	  }else if(e.keyCode == 84){ // t
+		//$timeb = time();
+		//$time_it_took = $timeb - $timea;
+		//$time_it_took = strval($time_it_took);
+		$.post( "python_socket_server.php", { action: "send", data:"end_time" })
+		//$t = time();
+		//logTapping($t);
+		logTapping("a");
+		//logTapping($time_it_took);
 	  }else if(e.keyCode == 32){ // SPACE
 
 	  }
 });
 
 
-// START SERVER BUTTON
+// START SERVER BUTTON 
 		$('#start_server').click(function(){
 		$.post( "python_socket_server.php", { action: "start_server" })
 		.done(function( data ) {
@@ -333,6 +353,12 @@ $( "body" ).keyup(function(e) {
 		function logMessage(obj) {
 			var el = document.getElementById("console_container");
 			var entry = '<div class="console_entry"> > '+obj+' </div>';
+			el.innerHTML= entry+el.innerHTML;
+		}
+
+		function logTapping(obj) {
+			var el = document.getElementById("tapping");
+			var entry = '<div class="tapping_entry"> > '+obj+' </div>';
 			el.innerHTML= entry+el.innerHTML;
 		}
 });

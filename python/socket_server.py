@@ -26,6 +26,7 @@
 
 import socket
 import xml.sax
+import time
 from threading import *
 
 from ev3dev.ev3 import *
@@ -83,6 +84,10 @@ class Client(Thread):
                     elif data == "stop_feed":
                         reply += "stop feeding paper"
                         lego_printer.stop_paper_feed()
+                    elif data == "start_time":
+                        reply += "hello start"
+                    elif data == "end_time":
+                        reply += "hello end"
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
@@ -94,9 +99,10 @@ class Client(Thread):
                     elif data == "move_left":
                         lego_printer.manual_move_x(-1)
                     elif data == "move_stop":
+                        reply += "bye"
                         lego_printer.manual_stop_x()
-                    elif data == "switch_pen_pos":
-                        lego_printer.switch_pen_pos()
+                    elif data == "switch_pen_po":
+                        pass
                     elif data == "move_pen_up":
                         lego_printer.pen_up()
                     elif data == "move_pen_down":
