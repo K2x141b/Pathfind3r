@@ -58,7 +58,7 @@ if(isset($_POST["action"])){
 
 		// putenv('PYTHONPATH=/var/www/.local/lib/python2.7/site-packages:/var/www/.local/lib/python2.7/site-packages:');
 		// echo shell_exec('sudo sudo killall python -9  2>&1' );
-		echo shell_exec('sudo killall python -9 2>&1');
+		echo shell_exec('sudo killall python3 -9 2>&1');
 	}
 }
 ?>
