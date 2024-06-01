@@ -24,12 +24,15 @@
 
 # This multi thread socket server receive commands from php and executes them on the pathfinder.
 
+from ev3dev.ev3 import *
+import time
+t1 = time.time()
+Sound.speak('Starting Server')
+
 import socket
 import xml.sax
-import time
-from threading import *
 
-from ev3dev.ev3 import *
+from threading import *
 from ev3dev.auto import OUTPUT_A, OUTPUT_B, OUTPUT_C, OUTPUT_D
 
 from get_info import BrickInfo
@@ -161,8 +164,9 @@ class Client(Thread):
 
 
 socket.listen(5)
-
-Sound.speak('Server Started').wait()
+t2 = time.time()
+t_sec = round(t2 - t1)
+Sound.speak('Server Started in ' + str(t_sec) + ' seconds.').wait()
 
 isActive = True
 while isActive:
