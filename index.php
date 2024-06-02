@@ -174,6 +174,7 @@ slideElements[id].text(value);
 }
 });
 
+$flip_flop = 1;
 
 $( "body" ).keydown(function(e) {
 	console.log("keydown "+e.keyCode);
