@@ -92,7 +92,7 @@ class Client(Thread):
                         reply += "stop feeding paper"
                         lego_printer.stop_paper_feed()
                     elif data == "start_time":
-                        if pro `== 0:
+                        if pro == 0:
                             global timea
                             timea = time.time()
                             reply = ""
