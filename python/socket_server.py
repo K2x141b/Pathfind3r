@@ -91,7 +91,7 @@ class Client(Thread):
                         lego_printer.stop_paper_feed()
                     elif data == "start_time":
                         global timea
-                        timea = 1
+                        timea = time.time()
                     elif data == "end_time":
                         reply += str(timea)
                     elif data == "feed_paper_in_inc":
