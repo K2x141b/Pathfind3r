@@ -45,6 +45,7 @@ lego_printer = LegoPrinter()
 brick_info = BrickInfo()
 
 timea = 0
+tap_dash = None
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = 'localhost'
@@ -65,6 +66,11 @@ class Client(Thread):
     def run(self):
         self.is_receiver = False
         timeb = 0
+        tit = 0
+        tapping_keys = {
+            01: "a",
+            10: "b"
+        }
         try:
             while 1:
                 data = self.socket.recv(1024)
@@ -95,7 +101,12 @@ class Client(Thread):
                         timea = time.time()
                     elif data == "end_time":
                         timeb = time.time()
-                        reply += str(timeb - timea)
+                        tit = timeb - timea
+                        if tit < 0.14:
+                            tap_dash += 0
+                        else:
+                            tap_dash += 1
+                        reply = tapping_keys[tap_dash]
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
