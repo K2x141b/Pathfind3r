@@ -44,6 +44,9 @@ from svg_parser import SvgParser
 lego_printer = LegoPrinter()
 brick_info = BrickInfo()
 
+global timea
+timea = 0
+
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = 'localhost'
 port = int(3000)
