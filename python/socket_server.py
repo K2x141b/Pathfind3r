@@ -61,6 +61,7 @@ class Client(Thread):
         self.start()
 
     def run(self):
+        timea = 0
         self.is_receiver = False
         try:
             while 1:
