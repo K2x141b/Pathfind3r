@@ -44,7 +44,6 @@ from svg_parser import SvgParser
 lego_printer = LegoPrinter()
 brick_info = BrickInfo()
 
-global timea
 timea = 0
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -91,6 +90,7 @@ class Client(Thread):
                         reply += "stop feeding paper"
                         lego_printer.stop_paper_feed()
                     elif data == "start_time":
+                        global timea
                         timea = 1
                     elif data == "end_time":
                         reply += str(timea)
