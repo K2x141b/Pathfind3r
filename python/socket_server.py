@@ -91,7 +91,7 @@ class Client(Thread):
                         timea = time.time()
                     elif data == "end_time":
                         timeb = time.time()
-                        reply += str(timeb)
+                        reply += str(timea)
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
@@ -105,7 +105,7 @@ class Client(Thread):
                     elif data == "move_stop":
                         reply += "bye"
                         lego_printer.manual_stop_x()
-                    elif data == "switch_pen_po":
+                    elif data == "switch_pen_pos":
                         pass
                     elif data == "move_pen_up":
                         lego_printer.pen_up()
