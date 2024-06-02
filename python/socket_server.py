@@ -65,6 +65,7 @@ class Client(Thread):
     def run(self):
         self.is_receiver = False
         timeb = 0
+        pro = 0
         try:
             while 1:
                 data = self.socket.recv(1024)
@@ -91,11 +92,15 @@ class Client(Thread):
                         reply += "stop feeding paper"
                         lego_printer.stop_paper_feed()
                     elif data == "start_time":
-                        global timea
-                        timea = time.time()
+                        if pro = 0:
+                            global timea
+                            timea = time.time()
+                            reply = ""
+                        pro = 1
                     elif data == "end_time":
                         timeb = time.time()
                         reply += str(timeb - timea)
+                        pro = 0
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
