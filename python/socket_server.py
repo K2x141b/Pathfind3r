@@ -23,7 +23,6 @@
 # SOFTWARE.
 
 # This multi thread socket server receive commands from php and executes them on the pathfinder.
-
 from ev3dev.ev3 import *
 import time
 t1 = time.time()
@@ -68,7 +67,7 @@ class Client(Thread):
         timeb = 0
         tit = 0
         tapping_keys = {
-            01: "a",
+            0: "a",
             10: "b"
         }
         try:
