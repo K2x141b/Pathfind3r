@@ -92,7 +92,7 @@ class Client(Thread):
                         timea = time.time()
                     elif data == "end_time":
                         timeb = time.time()
-                        reply = str(timeb - timea)
+                        reply = str(round(timeb - timea, 2))
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
