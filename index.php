@@ -191,7 +191,10 @@ $( "body" ).keydown(function(e) {
 	  }else if(e.keyCode == 90){ // z
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_state" })
 	  }else if(e.keyCode == 84){ // t
-		$.post( "python_socket_server.php", { action: "send", data:"start_time" })
+		 if ($flip_flop == 1) {
+        	 $.post( "python_socket_server.php", { action: "send", data:"start_time" })
+			 $flip_flop = 0;
+         }
 	  }
 });
 
@@ -208,7 +211,10 @@ $( "body" ).keyup(function(e) {
 		//$timeb = time();
 		//$time_it_took = $timeb - $timea;
 		//$time_it_took = strval($time_it_took);
-		$.post( "python_socket_server.php", { action: "send", data:"end_time" })
+
+        $.post( "python_socket_server.php", { action: "send", data:"end_time" })
+        $flip_flop = 1;
+
 		//$t = time();
 		//logTapping($t);
 		logTapping("a");
