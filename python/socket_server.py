@@ -65,7 +65,6 @@ class Client(Thread):
 
     def run(self):
         self.is_receiver = False
-        timea = time.time()
         try:
             while 1:
                 data = self.socket.recv(1024)
