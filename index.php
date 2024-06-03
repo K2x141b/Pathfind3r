@@ -126,18 +126,18 @@ SOFTWARE.
 				<button id="draw_svg" style="margin-top:10px;">
 				<img src="images/btn_draw_svg.png"/>
 				</button>
-				<button id="start_taping" style="margin-top:10px;">
-				<p>text</p>
-				</button>
-				<button id="end_taping" style="margin-top:10px;">
-				<p>text</p>
-				</button>
+				<div class="menu_row">
+				<button class="grey_wide_button" id="start_tipping">START TIPPEN</button>
+				</div>
+				<div class="menu_row">
+				<button class="grey_wide_button" id="end_tipping">ENDE TIPPEN</button>
+				</div>
 			</div>
 		</div>
 		<div class="console_container" id="console_container">
 		</div>
         <div class="tapping" id="tapping">
-		</div>	
+		</div>
 	</body>
 </html>
 <script>
@@ -243,6 +243,12 @@ $( "body" ).keyup(function(e) {
 
 
 // PAPER FEED
+		$('#start_tipping').click(function(){
+		$.post( "python_socket_server.php", { action: "send",data:"start_tipping" })
+		})
+		$('#end_tipping').click(function(){
+		$.post( "python_socket_server.php", { action: "send",data:"end_tipping" })
+		})
 		$('#feed_paper_in').click(function(){
 		$.post( "python_socket_server.php", { action: "send",data:"feed_paper_in" })
 		})
