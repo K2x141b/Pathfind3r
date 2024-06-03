@@ -191,7 +191,7 @@ $( "body" ).keydown(function(e) {
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_pos" })
 	  }else if(e.keyCode == 90){ // z
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_state" })
-	  }else if(e.keyCode == 84 and $flip_flop == 1){ // t
+	  }else if(e.keyCode == 84 && $flip_flop == 1){ // t
          $.post( "python_socket_server.php", { action: "send", data:"start_time" })
 		 $flip_flop = 0;
 	  }
