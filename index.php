@@ -126,11 +126,15 @@ SOFTWARE.
 				<button id="draw_svg" style="margin-top:10px;">
 				<img src="images/btn_draw_svg.png"/>
 				</button>
-				<div class="menu_row">
-				<button class="grey_wide_button" id="start_tipping">START TIPPEN</button>
+				<div >
+					<div class="menu_row">
+					<button class="grey_wide_button" id="start_tipping">START TIPPEN</button>
+					</div>
 				</div>
-				<div class="menu_row">
-				<button class="grey_wide_button" id="end_tipping">ENDE TIPPEN</button>
+				<div>
+					<div class="menu_row">
+					<button class="grey_wide_button" id="end_tipping">ENDE TIPPEN</button>
+					</div>
 				</div>
 			</div>
 		</div>

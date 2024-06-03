@@ -45,6 +45,8 @@ brick_info = BrickInfo()
 
 timea = 0
 tap_dash = ""
+switch = 0
+in_mode = 0
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = 'localhost'
@@ -127,6 +129,8 @@ class Client(Thread):
                             self.is_receiver = True
                             clients.add(self.socket)
 
+                    global in_mode
+
                     reply = "received:"
                     reply += data
                     print (data)
@@ -139,10 +143,14 @@ class Client(Thread):
                     elif data == "stop_feed":
                         reply += "stop feeding paper"
                         lego_printer.stop_paper_feed()
-                    elif data == "start_time":
+                    elif data == "start_tipping":
+                        in_mode = 1
+                    elif data == "end_tipping":
+                        in_mode = 0
+                    elif data == "start_time" and in_mode == 1:
                         global timea
                         timea = time.time()
-                    elif data == "end_time":
+                    elif data == "end_time" and in_mode == 1:
                         timeb = time.time()
                         tit = timeb - timea
                         global tap_dash
