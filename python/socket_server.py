@@ -44,7 +44,7 @@ lego_printer = LegoPrinter()
 brick_info = BrickInfo()
 
 timea = 0
-tap_dash = None
+tap_dash = ""
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = 'localhost'
@@ -112,8 +112,7 @@ class Client(Thread):
             "+": "01010",
             "-": "100001",
             "/": "10010",
-            "=": "10001",
-
+            "=": "10001"
         }
         try:
             while 1:
