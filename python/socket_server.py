@@ -147,9 +147,9 @@ class Client(Thread):
                         tit = timeb - timea
                         global tap_dash
                         if tit < 0.14:
-                            tap_dash += 0
+                            tap_dash += "0"
                         else:
-                            tap_dash += 1
+                            tap_dash += "1"
                         reply += str(tap_dash)
                         #reply = tapping_keys[str(i)]
                     elif data == "feed_paper_in_inc":
