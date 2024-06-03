@@ -115,10 +115,6 @@ class Client(Thread):
             "=": "10001",
 
         }
-        tapping_keys = {
-            "0": "A",
-            "1": "A"
-        }
         try:
             while 1:
                 data = self.socket.recv(1024)
