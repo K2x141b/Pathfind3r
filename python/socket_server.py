@@ -146,6 +146,7 @@ class Client(Thread):
                     elif data == "end_time":
                         timeb = time.time()
                         tit = timeb - timea
+                        global tap_dash
                         if tit < 0.14:
                             tap_dash += 0
                         else:
