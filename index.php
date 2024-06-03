@@ -192,8 +192,8 @@ $( "body" ).keydown(function(e) {
 	  }else if(e.keyCode == 90){ // z
 	  	$.post( "python_socket_server.php", { action: "send", data:"switch_pen_state" })
 	  }else if(e.keyCode == 84 && $flip_flop == 1){ // t
-         $.post( "python_socket_server.php", { action: "send", data:"start_time" })
-		 $flip_flop = 0;
+        $.post( "python_socket_server.php", { action: "send", data:"start_time" })
+		$flip_flop = 0;
 	  }
 });
 
