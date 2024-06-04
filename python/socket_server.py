@@ -44,6 +44,7 @@ lego_printer = LegoPrinter()
 brick_info = BrickInfo()
 
 timea = 0
+timeb = 0
 tap_dash = ""
 switch = 0
 in_mode = 0
@@ -66,7 +67,6 @@ class Client(Thread):
 
     def run(self):
         self.is_receiver = False
-        timeb = 0
         tit = 0
         tapping_keys = {
             "01": "A",
@@ -151,6 +151,8 @@ class Client(Thread):
                         global timea
                         timea = time.time()
                     elif data == "end_time" and in_mode == 1:
+                        global timeb
+                        reply += timeb
                         timeb = time.time()
                         tit = timeb - timea
                         global tap_dash
