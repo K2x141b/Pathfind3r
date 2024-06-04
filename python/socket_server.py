@@ -167,6 +167,7 @@ class Client(Thread):
                             if tap_dash in tapping_keys:
                                 reply += tapping_keys[tap_dash]
                                 tap_dash = ""
+                        reply += "hello"        
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
                     elif data == "feed_paper_out_inc":
