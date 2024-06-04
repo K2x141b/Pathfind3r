@@ -158,15 +158,14 @@ class Client(Thread):
                         #reply += str(n - timeb)
                         tit = timeb - timea
                         global tap_dash
-                        if tit < 0.14:
-                            tap_dash += "0"
-                        else:
-                            tap_dash += "1"
-
                         if (n - timeb) > 1.5:
                             if tap_dash in tapping_keys:
                                 reply += tapping_keys[tap_dash]
                                 tap_dash = ""
+                        if tit < 0.14:
+                            tap_dash += "0"
+                        else:
+                            tap_dash += "1"
                         reply += "hello"        
                     elif data == "feed_paper_in_inc":
                         lego_printer.manual_paper_feed_inc(1)
