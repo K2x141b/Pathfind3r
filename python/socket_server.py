@@ -68,6 +68,7 @@ class Client(Thread):
     def run(self):
         self.is_receiver = False
         tit = 0
+        n = 0
         tapping_keys = {
             "01": "A",
             "1000": "B",
@@ -152,8 +153,9 @@ class Client(Thread):
                         timea = time.time()
                     elif data == "end_time" and in_mode == 1:
                         global timeb
-                        reply += str(timeb)
+                        n = timeb
                         timeb = time.time()
+                        reply += str(n - timeb)
                         tit = timeb - timea
                         global tap_dash
                         if tit < 0.14:
