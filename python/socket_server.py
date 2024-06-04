@@ -152,7 +152,7 @@ class Client(Thread):
                         timea = time.time()
                     elif data == "end_time" and in_mode == 1:
                         global timeb
-                        reply += timeb
+                        reply += str(timeb)
                         timeb = time.time()
                         tit = timeb - timea
                         global tap_dash
