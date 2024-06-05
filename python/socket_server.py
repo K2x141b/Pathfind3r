@@ -161,11 +161,11 @@ class Client(Thread):
                         timeb = time.time()
                         #reply += str(n - timeb)
                         tit = timeb - timea    
+                        reply += tap_dash
                         if (timeb - n) > 1.5:
                             if tap_dash in tapping_keys:
                                 reply += tapping_keys[tap_dash]
                                 tap_dash = ""
-                            reply += tap_dash
                         if tit < 0.14:
                             tap_dash += "0"
                         else:
