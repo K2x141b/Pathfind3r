@@ -158,7 +158,7 @@ class Client(Thread):
                         #reply += str(n - timeb)
                         tit = timeb - timea
                         global tap_dash
-                        if (n - timeb) > 1.5:
+                        if (timeb - n) > 1.5:
                             #if tap_dash in tapping_keys:
                                 #reply += tapping_keys[tap_dash]
                                 #tap_dash = ""
