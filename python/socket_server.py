@@ -159,9 +159,9 @@ class Client(Thread):
                         tit = timeb - timea
                         global tap_dash
                         if (timeb - n) > 1.5:
-                            #if tap_dash in tapping_keys:
-                                #reply += tapping_keys[tap_dash]
-                                #tap_dash = ""
+                            if tap_dash in tapping_keys:
+                                reply += tapping_keys[tap_dash]
+                                tap_dash = ""
                             reply += "sun"
                         if tit < 0.14:
                             tap_dash += "0"
