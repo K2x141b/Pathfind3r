@@ -131,6 +131,8 @@ class Client(Thread):
                             clients.add(self.socket)
 
                     global in_mode
+                    
+                    global tap_dash
 
                     reply = "received:"
                     reply += data
@@ -158,8 +160,7 @@ class Client(Thread):
                         n = timeb
                         timeb = time.time()
                         #reply += str(n - timeb)
-                        tit = timeb - timea
-                        global tap_dash
+                        tit = timeb - timea    
                         if (timeb - n) > 1.5:
                             if tap_dash in tapping_keys:
                                 reply += tapping_keys[tap_dash]
