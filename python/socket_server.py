@@ -165,7 +165,7 @@ class Client(Thread):
                             if tap_dash in tapping_keys:
                                 reply += tapping_keys[tap_dash]
                                 tap_dash = ""
-                            reply += "sun"
+                            reply += tap_dash
                         if tit < 0.14:
                             tap_dash += "0"
                         else:
