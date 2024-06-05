@@ -146,8 +146,10 @@ class Client(Thread):
                         lego_printer.stop_paper_feed()
                     elif data == "start_tipping":
                         in_mode = 1
+                        tap_dash = ""
                     elif data == "end_tipping":
                         in_mode = 0
+                        tap_dash = ""
                     elif data == "start_time" and in_mode == 1:
                         global timea
                         timea = time.time()
