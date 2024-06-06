@@ -218,10 +218,14 @@ class Client(Thread):
                         Sound.speak('drawing svg')
                         svg_data = data.split('|')
 
+                        Sound.speak('split svg')
+
                         if os.path.isfile(svg_data[1]):
                             svg_path = svg_data[1]
                         else:
                             svg_path = "../" + svg_data[1]
+                        
+                        Sound.speak('checked file')
 
                         reply += svg_path
 
@@ -231,7 +235,11 @@ class Client(Thread):
                         parser.setContentHandler(svg_parser)
                         parser.parse(svg_path)
 
+                        Sound.speak('svg parsed')
+
                         lego_printer.draw(list(svg_parser.draw_list))
+
+                        Sound.speak('draw complete')
 
                     with clients_lock:
                         if self.is_receiver is False:
