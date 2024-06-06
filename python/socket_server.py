@@ -185,7 +185,7 @@ class Client(Thread):
                         reply += "bye"
                         lego_printer.manual_stop_x()
                     elif data == "switch_pen_pos":
-                        pass
+                        lego_printer.switch_pen_pos()
                     elif data == "move_pen_up":
                         lego_printer.pen_up()
                     elif data == "move_pen_down":
