@@ -202,6 +202,7 @@ class Client(Thread):
                     elif data == "force_stop":
                         lego_printer.force_stop()
                     elif data.startswith("draw_maze") and lego_printer.is_busy is False:
+                        Sound.speak('drawing maze')
                         lego_printer.stop_paper_feed()
 
                         maze_data = data.split('|')
@@ -214,6 +215,7 @@ class Client(Thread):
                         draw_list = parse_maze(rows, cols, grid_size, s, h, v)
                         lego_printer.draw(list(draw_list))
                     elif data.startswith("draw_svg") and lego_printer.is_busy is False:
+                        Sound.speak('drawing svg')
                         svg_data = data.split('|')
 
                         if os.path.isfile(svg_data[1]):
