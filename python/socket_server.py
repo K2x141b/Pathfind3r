@@ -230,9 +230,13 @@ class Client(Thread):
                         reply += svg_path
 
                         svg_parser = SvgParser()
+                        Sound.speak('check1').wait()
                         parser = xml.sax.make_parser()
+                        Sound.speak('check2').wait()
                         parser.setFeature(xml.sax.handler.feature_namespaces, 0)
+                        Sound.speak('check3').wait()
                         parser.setContentHandler(svg_parser)
+                        Sound.speak('check4').wait()
                         parser.parse(svg_path)
 
                         Sound.speak('svg parsed').wait()
