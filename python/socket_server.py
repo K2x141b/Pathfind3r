@@ -215,17 +215,17 @@ class Client(Thread):
                         draw_list = parse_maze(rows, cols, grid_size, s, h, v)
                         lego_printer.draw(list(draw_list))
                     elif data.startswith("draw_svg") and lego_printer.is_busy is False:
-                        Sound.speak('drawing svg')
+                        Sound.speak('drawing svg').wait()
                         svg_data = data.split('|')
 
-                        Sound.speak('split svg')
+                        Sound.speak('split svg').wait()
 
                         if os.path.isfile(svg_data[1]):
                             svg_path = svg_data[1]
                         else:
                             svg_path = "../" + svg_data[1]
                         
-                        Sound.speak('checked file')
+                        Sound.speak('checked file').wait()
 
                         reply += svg_path
 
@@ -235,11 +235,11 @@ class Client(Thread):
                         parser.setContentHandler(svg_parser)
                         parser.parse(svg_path)
 
-                        Sound.speak('svg parsed')
+                        Sound.speak('svg parsed').wait()
 
                         lego_printer.draw(list(svg_parser.draw_list))
 
-                        Sound.speak('draw complete')
+                        Sound.speak('draw complete').wait()
 
                     with clients_lock:
                         if self.is_receiver is False:
