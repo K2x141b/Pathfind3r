@@ -97,9 +97,10 @@ button:active{
 	overflow: auto;
 	background-color: #ffffff;
 	width: 320px;
-	height: calc(100vh - 160px);
+	height: calc(100vh - 170px);
 	padding: 0px;
 	box-sizing: border-box;
+	margin-top: 10px;
 }
 
 .menu_row{
