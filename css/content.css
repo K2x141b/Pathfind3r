@@ -154,7 +154,7 @@ button:active{
 	overflow: auto;
 	background-color:#f6372f;
 	width: 480px;
-	height: 900px;
+	height: calc(100vh - 180px);
 	padding: 10px; 
 	margin-top: 10px;
 	margin-left: 10px;
