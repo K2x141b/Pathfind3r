@@ -97,7 +97,7 @@ button:active{
 	overflow: auto;
 	background-color: #ffffff;
 	width: 320px;
-	height: calc(100vh - 190px);
+	height: calc(100vh - 160px);
 	padding: 0px; 
 }
 
