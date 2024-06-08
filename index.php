@@ -114,8 +114,7 @@ SOFTWARE.
 				</button>
 			</div>
 			<!-- DRAW SVG -->
-			<div class="menu_row" style="height:160px;">
-				
+			<div class="menu_row" style="height:160px;">			
 				<input id="uploadFile" placeholder="Choose File" disabled="disabled" style="margin-bottom:10px;width: 280px;" />
 					<div class="fileUpload btn btn-primary">
 					    <div class="grey_wide_button" align="center" style="width:150px;height:40px;padding-top:20px">Select File</div>
@@ -123,12 +122,10 @@ SOFTWARE.
 					</div>
 					<button class="grey_wide_button" id="upload_svg" style="width:120px;margin-left:10px;">UPLOAD</button>
 				
-     		</div>
-			<div class="menu_row" style="height:160px;">		
-			<button id="draw_svg" style="margin-top:10px;">
-			<img src="images/btn_draw_svg.png"/>
-			</button>
-			</div>
+					<button id="draw_svg" style="margin-top:10px;">
+					<img src="images/btn_draw_svg.png"/>
+					</button>
+     		</div>	
 			<div>
 				<div class="menu_row">
 				<button class="grey_wide_button" id="start_tipping">START TIPPEN</button>
