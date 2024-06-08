@@ -107,7 +107,7 @@ button:active{
 	background-color: #ffffff;
 	margin-bottom:10px;
 	margin-left:10px;
-	margin-right:10px;
+	margin-right:0px;
 	height: 60px;
 }
 
