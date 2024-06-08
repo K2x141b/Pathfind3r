@@ -45,8 +45,8 @@ class SvgParser(xml.sax.ContentHandler):
             path = attributes["d"]
             path_data = path.split(' ')
             moved_to_start_pos = False
-            start_pos_x = 0
-            start_pos_y = 0
+            start_pos_x = 200
+            start_pos_y = 200
             self.draw_list.append(DrawAction(t=DrawAction.PEN_UP))
 
             for item in path_data:
