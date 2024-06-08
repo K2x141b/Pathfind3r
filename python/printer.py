@@ -57,8 +57,8 @@ class LegoPrinter:
         self.draw_list = []
 
         self.motors_calibrated = False
-        self.x_units_to_cm = 1 / 0.5  # multiply with x value to convert to motor positions 1.1
-        self.y_units_to_cm = 1 / 0.5  # multiply with y value to convert to motor positions 1.2
+        self.x_units_to_cm = 1 / 1.1  # multiply with x value to convert to motor positions 1.1
+        self.y_units_to_cm = 1 / 1.2  # multiply with y value to convert to motor positions 1.2
 
         self.is_drawing = False
         self.is_busy = False
