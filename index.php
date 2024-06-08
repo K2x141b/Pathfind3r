@@ -258,6 +258,8 @@ $( "body" ).keyup(function(e) {
 		})
 		$('#clear_console').click(function(){
 			var el = document.getElementById("console_container");
+			el.innerHTML= ""; 
+			var el = document.getElementById("tapping");
 			el.innerHTML= "";
 		})
 		$('#feed_paper_out').click(function(){
