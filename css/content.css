@@ -96,7 +96,7 @@ button:active{
 	overflow: auto;
 	background-color: #ffffff;
 	width: 320px;
-	height:920px;
+	height: calc(100vh - 180px);
 	padding: 0px; 
 }
 
