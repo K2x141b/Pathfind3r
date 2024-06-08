@@ -118,7 +118,7 @@ SOFTWARE.
 				
 				<input id="uploadFile" placeholder="Choose File" disabled="disabled" style="margin-bottom:10px;width: 280px;" />
 					<div class="fileUpload btn btn-primary">
-					    <div class="grey_wide_button" align="center" style="width:120px;height:40px;padding-top:20px">Select File</div>
+					    <div class="grey_wide_button" style="width:120px;height:40px;padding-top:20px">Select File</div>
 					    <input id="uploadBtn" type="file" class="upload" style="height: 50px;width: 150px;" />
 					</div>
 					<button class="grey_wide_button" id="upload_svg" style="width:120px;margin-left:10px;">UPLOAD</button>
