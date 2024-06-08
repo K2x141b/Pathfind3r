@@ -115,7 +115,7 @@ button:active{
 	width: 480px;
 	padding: 10px;
 	margin-top: 10px; /* Below the fixed top bar (50px height + 10px spacing) */
-	height: calc(100vh - 110px); /* 70px accounts for the top bar (50px) and margin-top (20px) */
+	height: calc(100vh - 500px); /* 70px accounts for the top bar (50px) and margin-top (20px) */
 }
 .console_entry{
 	
