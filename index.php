@@ -123,11 +123,13 @@ SOFTWARE.
 					</div>
 					<button class="grey_wide_button" id="upload_svg" style="width:120px;margin-left:10px;">UPLOAD</button>
 				
-				<button id="draw_svg" style="margin-top:10px;">
-				<img src="images/btn_draw_svg.png"/>
-				</button>
+     		</div>
+			<div class="menu_row" style="height:160px;">		
+			<button id="draw_svg" style="margin-top:10px;">
+			<img src="images/btn_draw_svg.png"/>
+			</button>
 			</div>
-			<div >
+			<div>
 				<div class="menu_row">
 				<button class="grey_wide_button" id="start_tipping">START TIPPEN</button>
 				</div>
