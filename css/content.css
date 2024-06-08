@@ -53,7 +53,6 @@ button:active{
 }
 
 .grey_wide_button{
-	float: left;
 	color:#ffffff;
 	background-color: #3b3b3b;
 	font: bold 18px "Impact, Charcoal, Arial, sans-serif", sans-serif;
@@ -107,7 +106,7 @@ button:active{
 	display: block;
 	background-color: #ffffff;
 	margin-bottom:10px;
-	margin-left:10px;
+	margin-left:20px;
 	margin-right:10px;
 	height: 60px;
 }
