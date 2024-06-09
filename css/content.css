@@ -84,7 +84,7 @@ button:active{
 
 .logo{
 	background-color: #3b3b3b;
-	width: 820px;
+	width: calc(50vw + 200px);
 	height: 150px;
 	margin: 0;
 	padding: 0;
