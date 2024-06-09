@@ -40,7 +40,7 @@
      id="layer1">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 124.16079,170.99066 V 273.58506 H 220.28526 V 171.60684 82.260373 Z"
+       d="M 120,170 M 120,270 M 150,270 M 150,170 Z"
        id="path1" />
   </g>
 </svg>
